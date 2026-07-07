@@ -14,7 +14,7 @@ for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
     audio.play();
     document.querySelectorAll(".drum")[i].style.color = "black";
     setTimeout(() => {
-      document.querySelectorAll(".drum")[i].style.color = "red";
+      document.querySelectorAll(".drum")[i].style.color = "#7a3e48";
     }, 1000);
     buttonAnimation(i);
   });

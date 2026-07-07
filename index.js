@@ -18,3 +18,13 @@ for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
     }, 1000);
   });
 }
+
+const keys = ["w", "a", "s", "d", "j", "k", "l"];
+
+document.addEventListener("keydown", function (e) {
+  const keyIndex = keys.indexOf(e.key);
+  if (keyIndex != -1) {
+    const audio = new Audio(sounds[keyIndex]);
+    audio.play();
+  }
+});

@@ -16,6 +16,7 @@ for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
     setTimeout(() => {
       document.querySelectorAll(".drum")[i].style.color = "red";
     }, 1000);
+    buttonAnimation(i);
   });
 }
 
@@ -27,4 +28,12 @@ document.addEventListener("keydown", function (e) {
     const audio = new Audio(sounds[keyIndex]);
     audio.play();
   }
+  buttonAnimation(keyIndex);
 });
+
+function buttonAnimation(i) {
+  document.querySelectorAll(".drum")[i].classList.add("pressed");
+  setTimeout(() => {
+    document.querySelectorAll(".drum")[i].classList.remove("pressed");
+  }, 1000);
+}
